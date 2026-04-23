@@ -3,7 +3,7 @@ package option_test
 import (
 	"testing"
 
-	"github.com/DaiYuANg/arcgo/pkg/option"
+	"github.com/arcgolabs/pkg/option"
 )
 
 func TestApply(t *testing.T) {

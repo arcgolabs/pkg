@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/DaiYuANg/arcgo/collectionx"
+	collectionlist "github.com/arcgolabs/collectionx/list"
 	"github.com/samber/lo"
 	"github.com/samber/oops"
 	"go.uber.org/fx"
@@ -27,7 +27,7 @@ func ProvideOptionGroup[T any, O ~func(*T)](group string, opts ...O) fx.Option {
 		return fx.Options()
 	}
 
-	providers := collectionx.NewListWithCapacity[fx.Option](len(opts))
+	providers := collectionlist.NewListWithCapacity[fx.Option](len(opts))
 	tag := fmt.Sprintf(`group:%q`, group)
 	lo.ForEach(lo.Filter(opts, func(opt O, _ int) bool { return opt != nil }), func(opt O, _ int) {
 		currentOpt := opt
@@ -48,7 +48,7 @@ func ProvideOptionGroup[T any, O ~func(*T)](group string, opts ...O) fx.Option {
 // 3. 先 ValidateApp
 // 4. 校验通过后再 fx.New
 func CreateApplicationContainer[L SupportedFxLoggerType](modules ...fx.Option) (*fx.App, error) {
-	opts := collectionx.NewListWithCapacity[fx.Option](len(modules) + 1)
+	opts := collectionlist.NewListWithCapacity[fx.Option](len(modules) + 1)
 	opts.Add(loggerOption[L]())
 	opts.MergeSlice(modules)
 	built := opts.Values()

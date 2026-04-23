@@ -3,7 +3,7 @@ package fx_test
 import (
 	"testing"
 
-	pkgfx "github.com/DaiYuANg/arcgo/pkg/fx"
+	pkgfx "github.com/arcgolabs/pkg/fx"
 	uberfx "go.uber.org/fx"
 )
 

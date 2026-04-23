@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/DaiYuANg/arcgo/collectionx"
+	collectionset "github.com/arcgolabs/collectionx/set"
 	"github.com/samber/oops"
 )
 
 var (
 	// usedPorts tracks ports that have been allocated during the current process.
-	usedPorts = collectionx.NewConcurrentSet[int]()
+	usedPorts = collectionset.NewConcurrentSet[int]()
 )
 
 const maxFindAttempts = 50
