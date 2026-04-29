@@ -3,14 +3,14 @@ module github.com/arcgolabs/pkg/randomport
 go 1.26.2
 
 require (
-	github.com/arcgolabs/collectionx/set v0.2.0
+	github.com/arcgolabs/collectionx/set v0.6.0
 	github.com/samber/oops v1.21.0
 )
 
 require (
-	github.com/arcgolabs/collectionx/internal v0.2.0 // indirect
-	github.com/arcgolabs/collectionx/list v0.2.0 // indirect
-	github.com/arcgolabs/collectionx/mapping v0.2.0 // indirect
+	github.com/arcgolabs/collectionx/internal v0.6.0 // indirect
+	github.com/arcgolabs/collectionx/list v0.6.0 // indirect
+	github.com/arcgolabs/collectionx/mapping v0.6.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/oklog/ulid/v2 v2.1.1 // indirect
 	github.com/samber/lo v1.53.0 // indirect
