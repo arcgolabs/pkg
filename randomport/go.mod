@@ -3,7 +3,7 @@ module github.com/arcgolabs/pkg/randomport
 go 1.26.2
 
 require (
-	github.com/arcgolabs/collectionx/set v0.6.0
+	github.com/arcgolabs/collectionx/set v0.7.0
 	github.com/samber/oops v1.21.0
 )
 
